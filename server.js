@@ -8,7 +8,7 @@ const bcrypt = require('bcrypt');
 // Firebase Admin SDK Initialization
 const admin = require('firebase-admin');
 const { getFirestore } = require('firebase-admin/firestore');
-var serviceAccount = require("");
+var serviceAccount = require("./key.json");
 
 // Middleware setup
 app.set('view engine', 'ejs');
