@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    header {
+        background-color: #081b29; 
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+    
+    
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+
+      footer {
+    background-color: #081b29;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: auto;
+  }
+      </style>
+</head>
+<body>
+    <header>
+        <h1>CART</h1>
+        </header>
+        <section>
+            <div class="container">
+                <form action="/ordersubmit" method="GET">
+                  <h1>  YOUR ORDER !!!</h1>
+                  <div class="order">
+                    <table class="table">
+                        <tr>
+                            <th>Product</th>
+                            <th>Cost</th>
+                        </tr>
+                        <tr>
+                            <td> <%= product %></td>
+                            <td> <%= cost %></td>
+                        </tr>
+                        <tr>
+                            <th>Total Cost</th>
+                            <th><%= cost %></th>
+                        </tr>
+                    </table>
+                    <p> Your order is eligible for FREE Delivery</p>
+                    <button type="submit">Proceed to Buy</button>
+                 <b> Happy Shopping</b>
+                 <br><b>Buy Again</b>   
+                </div>
+                </form>
+                </div>
+            </section>
+        <footer>
+            <p>&copy; 2024 Fruit Market. All rights reserved.</p>
+            </footer>
+</body>
+</html>

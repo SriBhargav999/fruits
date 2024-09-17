@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+     body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #f0f4f7;
+    }
+
+    header {
+      background-color: #081b29; 
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+
+    li a:hover {
+      background-color: aquamarine;
+    }
+
+    .block {
+      background-image: url('https://w0.peakpx.com/wallpaper/496/310/HD-wallpaper-%E2%9D%A6-water-fresh-fruits-splashing-thumbnail.jpg') ;
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .block h2 {
+      font-size: 60px;
+      margin: 0;
+    }
+
+    section {
+      text-align: center;
+      padding: 50px;
+    }
+
+    section h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+
+    .product-showcase {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      width: 30%;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 15px 0;
+      font-size: 24px;
+    }
+
+    .benefits {
+      background-color: #e0f7fa;
+      padding: 50px;
+    }
+
+    .benefits h3 {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .benefits ul {
+      list-style-type: square;
+      font-size: 20px;
+      text-align: left;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    .benefits ul li {
+        margin:20px;
+    }
+
+    footer {
+      background-color: #081b29;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin-top: auto;
+    }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Fruit Market</h1>
+        <nav>
+          <ul>
+            <li><a href="#" onclick="showPopup()">Home</a></li>
+            <li><a href="#" onclick="showPopup()">About</a></li>
+            <li><a href="#" onclick="showPopup()">Products</a></li>
+            <li><a href="#" onclick="showPopup()"> Cart</a></li>
+            <li><a href="#" onclick ="showPopup()">Contact</a></li>
+             <li><a href="/signin">Login</a></li>
+             <li><a href="/signup">Signup</a></li>
+          </ul>
+          
+        </nav>
+    
+      </header>
+      <section>
+        <div class="block">
+            <h2>Fresh, Organic & Delicious Fruits</h2>
+          </div>
+        
+          <section class="product-showcase">
+            <div class="product">
+              <img src="https://images.everydayhealth.com/images/diet-nutrition/apples-101-about-1440x810.jpg?sfvrsn=f86f2644_5" alt="Apple">
+              <h3>Fresh Apples</h3>
+              <p>Sweet, crisp, and perfect for a healthy snack.</p>
+            </div>
+        
+            <div class="product">
+              <img src="https://mana.md/wp-content/uploads/2021/11/banana-1025109_1280-1024x793.jpg" alt="Bananas">
+              <h3>Organic Bananas</h3>
+              <p>Rich in potassium and great for a quick energy boost.</p>
+            </div>
+        
+            <div class="product">
+              <img src="https://media.istockphoto.com/id/1008375528/photo/orange-fruit-with-green-leafs-in-basket-on-grey-wooden-table.jpg?s=612x612&w=0&k=20&c=igWpC0k_kNA853hryjSaew9Jo26Y3SSgM0CMRphAyUQ=" alt="Oranges">
+              <h3>Juicy Oranges</h3>
+              <p>High in vitamin C, perfect for fresh juice.</p>
+            </div>
+          </section>
+        
+          <section class="benefits">
+            <h3>Benefits of Fresh Fruit</h3>
+            <ul>
+              <li>Rich in essential vitamins and minerals.</li>
+              <li>Boosts the immune system.</li>
+              <li>Promotes healthy digestion.</li>
+              <li>Helps in weight management.</li>
+              <li>Improves overall health and well-being.</li>
+            </ul>
+          </section>
+        
+        </section>
+      
+  <footer>
+    <p>&copy; 2024 Fruit Market. All rights reserved.</p>
+  </footer>
+      <script>
+        function showPopup(){
+            alert("Please Signup for shopping!!");
+        }
+        </script>
+</body>
+</html>

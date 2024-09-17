@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        margin: 0px;
+        padding:0px;
+    }
+    h1{
+        text-align: center;
+    }
+    form{
+        margin:50px 450px 0px 450px;
+        border: groove; 
+        border-radius: 3px;
+        padding-left: 30px; 
+    }
+    input{
+        width: 75%;
+        padding: 8px;
+        margin:10px 10px 0px 10px;
+        border-radius: 5px;
+        transition:transform;
+        
+    }
+    input:hover{
+        transform: scaleY(1.2);
+    }
+    button{
+        width:30%;
+        align-items: center;
+        margin-left: 10px;
+        padding: 5px;
+        background: rgb(4, 102, 135);
+        color:white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: large;
+        font-style: bold;
+        transition : transform;
+    }
+    button:hover{
+        transform: ScaleX(1.1);
+        
+    }
+    p{
+        margin-left: 8px;
+    }
+    .p{
+            background-color: rgb(249, 105, 105);
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="wrapper">
+        <div class="form-box login">
+    <form action="signup" method="post">
+        <h1>Signup</h1>
+        <div >
+        <label>Full_Name:</label>
+        <input type ="text" name = "full_name" required> <br><br>
+        <label>Last_Name:</label>
+        <input type="text" name = "last_name" required> <br><br>
+        <label>Email:</label>
+        <input type="text" name = "email" required> <br><br>
+        <label>Password:</label>
+        <input type="password" name = "password" required> <br>
+        <p>Already have an account?<a href="signin">Signin</a></p><br>
+        <button  type="submit">Submit</button>
+
+        </div>
+        <p class=".p"><%=error%></p>
+    </form>
+    </div>
+</div>
+</body>
+</html>

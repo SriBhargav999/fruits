@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+     body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  header {
+    background-color: #081b29; 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+    h1{
+        text-align: center;
+    }
+    form{
+        margin:20px 450px 50px 500px;
+        border: groove; 
+        border-radius: 3px;
+        padding-left: 30px; 
+    }
+    input{
+        width: 75%;
+        padding: 8px;
+        margin:10px;
+        border-radius: 5px;
+        transition:transform;
+        
+    }
+    input:hover{
+        transform: scaleY(1.2);
+    }
+    button{
+        width:30%;
+        align-items: center;
+        margin-left: 10px;
+        padding: 5px;
+        margin:0px 10px 10px 0px;
+        background: rgb(4, 102, 135);
+        color:white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: large;
+        font-style: bold;
+        transition : transform;
+    }
+    button:hover{
+        transform: ScaleX(1.1);
+        
+    }
+      
+     
+    </style>
+</head>
+<body>
+    <header>
+   <h3> <b>CONTACT US!!!</b></h3>
+   </header>
+   
+   <h2>Thank you for shopping !!!</h1>
+    <div class="wrapper">
+        <div class="form-box login">
+            <form action = "/contactsubmit" method = "GET" >
+                <div class = "input-box">
+                    <h1>Feedback....</h1>
+                    <label><b>EMAIL: </b></label>
+                    <input type = "email" name = "email"  placeholder = "Enter your email..." required><br><br>
+                    <label><b>PHONE NUMBER: </b></label>
+                    <input type = "phone" name = "phone"  placeholder = "Enter your phone number..."required><br><br>
+                    <label><b>REVIEW/FEEDBACK: </b></label>
+                    <input  type = "text" name = "review"  placeholder = "Enter your feedback about product..." required>
+                <br><br>
+                <button type = "submit">SUBMIT</button><br>
+                </div>
+            </form>
+        </div>
+        </div>
+
+</body>
+</html>

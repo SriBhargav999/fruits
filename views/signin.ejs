@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding:0px;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            margin:120px 450px 50px 500px;
+            border: groove; 
+            border-radius: 3px;
+            padding-left: 30px; 
+        }
+        input{
+            width: 75%;
+            padding: 8px;
+            margin:10px;
+            border-radius: 5px;
+            transition:transform;
+            
+        }
+        input:hover{
+            transform: scaleY(1.2);
+        }
+        button{
+            width:30%;
+            align-items: center;
+            margin-left: 10px;
+            padding: 5px;
+            margin:0px 10px 10px 0px;
+            background: rgb(4, 102, 135);
+            color:white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: large;
+            font-style: bold;
+            transition : transform;
+        }
+        button:hover{
+            transform: ScaleX(1.1);
+            
+        }
+        p{
+          margin-left: 8px;  
+        }
+        </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+    <div class="form-box login">
+    <form action="signin" method="post">
+        
+        <div>
+        <h1>Login </h1>
+        <label>Email:</label><br>
+        <input type="text" name = "email" required> <br><br>
+        <label>Password:</label><br>
+        <input type="password" name = "password" required> <br>
+        <p>Don't have an account?<a href="signup">Signup</a></p><p><a href="signup">Forgot password</a></p>
+        <button  type="submit">Login</button>
+    </div>
+    </form>
+    </div>
+</div>
+</body>
+</html>

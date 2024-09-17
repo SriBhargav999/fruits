@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+header {
+    background-color: #ffffff; 
+    color: #050505;
+    padding: 20px;
+    border:groove 2px;
+    text-align: center;
+    position:sticky;
+  }  
+
+ul{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+li{
+    font-style: bold;
+    font-size: medium;
+}
+a{
+    color:#000;
+
+}
+.item {
+  position: relative;
+  flex-basis: calc(33.33% - 20px); 
+  margin-bottom: 20px; 
+  border:2px solid #000;
+}
+button{
+    margin:10px;
+    background-color:#fff;
+    border:2px groove;
+    padding:5px;
+    font-size: medium;
+    font-weight:400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.item:nth-child(3n+1) {
+  flex-basis: calc(66.66% - 20px);
+}
+
+.item::before {
+  content: "";
+  display: block;
+  padding-top: 100%; 
+}
+img{
+    margin:10px;
+    margin-left: 20px;
+    transition: transform 1s;
+    border:1px groove #504949;
+}
+img:hover{
+    cursor: pointer;
+    transform: scaleY(1.1);
+}
+.item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+.item-1{
+    border: 0.5px none #000;
+    margin:10px 10px 0px 10px;
+    transition: transform 1s;
+}
+.item-1:hover{
+    cursor:pointer;
+    transform:scaleY(1)
+}
+.item-2{
+    border: 0.5px none #000;
+    margin:10px 10px 0px 10px;
+    transition: transform 1s;
+}
+.item-2:hover{
+    cursor:pointer;
+    transform:scaleY(1)
+}
+.item-3{
+    border: 0.5px none #000;
+    margin:10px 10px 0px 10px;
+    transition: transform 1s;
+}
+.item-3:hover{
+    cursor:pointer;
+    transform:scaleY(1)
+}
+.item-4{
+    border: 0.5px none #000;
+    margin:10px 10px 0px 10px;
+    transition: transform 1s;
+}
+.item-4:hover{
+    cursor:pointer;
+    transform:scaleY(1)
+}
+.item-5{
+    border: 0.5px none #000;
+    margin:10px 10px 0px 10px;
+    transition: transform 1s;
+}
+.item-5:hover{
+    cursor:pointer;
+    transform:scaleY(1)
+}
+.item-6{
+    border: 0.5px none #000;
+    margin:10px 10px 0px 10px;
+    transition: transform 1s;
+}
+.item-6:hover{
+    cursor:pointer;
+    transform:scaleY(1)
+}
+.item-7{
+    border: 0.5px none #000;
+    margin:10px 10px 0px 10px;
+    transition: transform 1s;
+}
+.item-7:hover{
+    cursor:pointer;
+    transform:scaleY(1)
+}
+.item-8{
+    border: 0.5px none #000;
+    margin:10px 10px 0px 10px;
+    transition: transform 1s;
+}
+.item-8:hover{
+    cursor:pointer;
+    transform:scaleY(1)
+}
+.item-9{
+    border: 0.5px none #000;
+    margin:10px 10px 0px 10px;
+    transition: transform 1s;
+}
+.item-9:hover{
+    cursor:pointer;
+    transform:scaleY(1)
+}
+
+p{
+    margin:10px;
+}
+h2{
+    text-align: center;
+}
+.a{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 50px;
+    color:#000;
+    
+}
+
+footer {
+    background-color: #081b29;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+   .sar{
+    padding: 10px 20px;
+    font-size: 16px;
+    align-items: center;
+    margin-left: 600px;
+    
+   }
+
+  
+        </style>
+</head>
+<body>
+    <header>
+    <h1>Fruit Cart</h1>
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/product">Products</a></li>
+          <li><a href="/cart">Cart</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        
+      </nav>
+    
+    </header>
+     <main>
+       <div class="flex-container">
+        <div class="a">
+        <div class="item-1">
+            <h2>Apple</h2>
+            <img src="https://images.everydayhealth.com/images/diet-nutrition/apples-101-about-1440x810.jpg?sfvrsn=f86f2644_5" id="b" height="250px" width="250px">
+            <div class="data">
+            <p><b>Description:</b>
+                Crisp and refreshing, apples.</p>
+                <p><b>Price:</b>50/-</p>
+                <form action="/addToCart" method="GET">
+                    <input type="hidden"  name ="ItemCost" value="50/-">
+                    <input type = "hidden"  name ="ItemName" value="Apple">
+            <button type="submit">Add To Cart</button>
+            </form>
+            <form action="/addToOrders" method="GET">   
+            <button type="submit" name="item" value="Apple">Order now</button>
+            </form>
+            </div>
+        </div>
+        <div class="item-2">
+            <h2>Banana</h2>
+            <img src="https://chefsmandala.com/wp-content/uploads/2018/03/Banana.jpg" id="b" height="250px" width="250px">
+            <div class="data">
+            <p><b>Description:</b>A versatile and nutritious fruit.</p>
+                <p><b>Price:</b>50/-</p>
+                <form action="/addToCart" method="GET">
+                    <input type="hidden" name="ItemName" value="Banana">
+                    <input type="hidden" name="ItemCost" value="50/-">
+            <button type="submit">Add To Cart</button>
+            </form>
+            <br>
+            <form action="/addToOrders" method="GET">   
+            <button type="submit" name="item" value="Banana">Order now</button>
+            </form>
+            </div>
+        </div>
+        <div class="item-3">
+            <h2>Orange</h2>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpcosjNm6hWb90F-TZSnLqylSaiwCAqsYEIQ&usqp=CAU" id="b">
+           <div class="data">
+            <p><b>Description:</b>
+                Fresh and tangy citrus fruits</p>
+                <p><b>Price:</b>60/-</p>
+                <form action="/addToCart" method="GET">
+                    <input type="hidden" name="ItemName" value="Orange">
+                    <input type="hidden" name="ItemCost" value="60/-">
+            <button type="submit">Add To Cart</button>
+            </form>
+            <br>
+            <form action="addToOrders" method="GET">   
+            <button type="submit" name="item" value="Orange">Order now</button>
+            </form>
+            </div>
+            </div>
+        </div>
+        <div class="a">
+        <div class="item-4">
+            <h2>Grapes</h2> 
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSolH-zfPGK65lWErwWHtzEj4LCF_37IZ9XIA&usqp=CAU" id="b">
+           <div class="data">
+            <p><b>Description:</b>
+                Juicy grapes bursting with flavor."</p>
+                <p><b>Price:</b>140/-</p>
+                <form action="/addToCart" method="GET">
+                    <input type="hidden" name="ItemName" value="Grapes">
+                    <input type="hidden" name="ItemCost" value="140/-">
+                    
+            <button type="submit">Add To Cart</button>
+            </form>
+            <br>
+            <form action="/addToOrders" method="GET">   
+            <button type="submit" name="item" value="Grapes">Order now</button>
+            </form>
+            </div>
+        </div>
+       
+        <div class="item-5">
+            <h2>Pomegranate</h2>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjCMD73woTwWjPEHGmzaYFQnhUwqwwMX6uXg&usqp=CAU" id="b">
+           <div class="data">
+            <p><b>Description:</b>
+                Nutrient-rich fruit</p>
+                <p><b>Price:</b>120/-</p>
+                <form action="/addToCart" method="GET">
+                    <input type="hidden" name="ItemName" value="Pomegranate">
+                    <input type="hidden" name="ItemCost" value="120/-">
+            <button type="submit">Add To Cart</button>
+            </form>
+            <br>
+            <form action="/addToOrders" method="GET">   
+            <button type="submit" name="item" value="Pomegranate">Order now</button>
+            </form> 
+            </div>   
+        </div>
+         
+        <div class="item-6">
+            <h2>Mango</h2>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQgCVCthTmxTLoxROGqJ9FjcVicZaul08zWw&usqp=CAU" id="b">
+             <div class="data">
+            <p><b>Description:</b>
+                King of Fruits, known for its sweet </p>
+                <p><b>Price:</b>200/-</p>
+                <form action="/addToCart" method="GET">
+                    <input type="hidden" name="ItemName" value="Mango">
+                    <input type="hidden" name="ItemCost" value="200/-">
+            <button type="submit">Add To Cart</button>
+            </form>
+            <br>
+            <form action="/addToOrders" method="GET">   
+            <button type="submit" name="item" value="Mango">Order now</button>
+             </form>
+             </div>
+        </div>
+      </div>
+      <div class="a">
+        <div class="item-7">
+            <h2>Watermelon</h2>
+          <img src="data:image/jpeg;base64,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" id="b">
+          <div class="data">
+          <p><b>Description:</b>
+                Juicy and refreshing summer fruit</p>
+                <p><b>Price:</b>40/-</p>
+                <form action="/addToCart" method="GET">
+                    <input type="hidden" name="ItemName" value="Watermelon">
+                    <input type="hidden" name="ItemCost" value="40/-">
+            <button type="submit">Add To Cart</button>
+            </form>
+            <br>
+            <form action="/addToOrders" method="GET">   
+            <button type="submit" name="item" value="Watermelon">Order now</button>
+            </form>
+            </div>
+        </div>
+        <div class="item-8">
+            <h2>Pineapple</h2>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNm-8iqopkYlnbAOzEGqt5AwkWVed7xHPEjg&usqp=CAU" id="b">
+           <div class="data">
+            <p><b>Description:</b>
+                Sweet and tangy tropical fruit</p>
+                <p><b>Price:40/-</b></p>
+                <form action="/addToCart" method="GET">
+                    <input type="hidden" name="ItemName" value="Pineapple">
+                    <input type="hidden" name="ItemCost" value="40/-">
+            <button type="submit">Add To Cart</button>
+            </form>
+            <br>
+            <form action="/addToOrders" method="GET">
+            <button type="submit" name="item" value="Pineapple">Order now</button>
+            </form>
+            </div>
+        </div>
+        <div class="item-9">
+            <h2>Strawberry</h2>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBHWRxUPN156nEmOiHMsqXicZPR1b3suDReg&usqp=CAU" id="b">
+           <div class="data">
+            <p><b>Description:</b>
+                perfect for a sweet and healthy treat</p>
+                <p><b>Price:</b>100/-</p>
+                <form action="/addToCart" method="GET">
+                    <input type="hidden" name="ItemName" value="Strawberry">
+                <input type="hidden" name="ItemCost" value="100/-">
+              
+            <button type="submit">Add To Cart</button>
+            </form>
+            <br>
+            <form action="/addToOrders" method="GET">
+            <button type="submit" name ="item" value="Strawberry">Order now</button>
+            </form>
+            </div>
+        </div>
+        </div>
+        </div>
+
+          <div class="sar"> 
+      
+        </div>
+        </main>
+    <footer>
+        <p>&copy; 2024 Fruit Market. All rights reserved.</p>
+        </footer>
+</body>
+</html>

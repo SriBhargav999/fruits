@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART</title>
+    <style>
+        body{
+            margin: 0px;
+            padding:0px;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            margin:100px 450px 50px 500px;
+            border: groove; 
+            border-radius: 3px;
+            padding-left: 30px; 
+        }
+        input{
+            width: 75%;
+            padding: 8px;
+            margin:10px;
+            border-radius: 5px;
+            transition:transform;
+            
+        }
+        input:hover{
+            transform: scaleY(1.2);
+        }
+        button{
+            width:30%;
+            align-items: center;
+            margin-left: 10px;
+            padding: 5px;
+            margin:0px 10px 10px 0px;
+            background: rgb(4, 102, 135);
+            color:white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: large;
+            font-style: bold;
+            transition : transform;
+        }
+        button:hover{
+            transform: ScaleX(1.1);
+            
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+      <form action="cartsubmit"  method="GET">
+        <h1>YOUR CART !!!</h1>
+        <div class="cart">
+            <table class="table">
+                <tr>
+                    <th>Products </th>
+                    <th>Cost </th>
+                </tr>
+                <% for(var i = 0;i < productsData.length;i++){ %>
+                    <tr>
+                    <td><%= productsData[i] %></td>
+                    <td><%= cost[i] %></td></tr>
+            <% } %>
+            <tr class = "hover">
+                <th>Total Cost</th>
+                <th><%= amount %></th></tr>
+            </table>
+            <p> Your order is eligible for FREE Delivery</p>
+            <button type="submit">Proceed to Buy</button>
+            <br>
+            <br>
+            
+            <div class="cs">
+         <b> Happy Shopping</b>
+         <br><b>Buy Again</b>
+         </div>  
+            </div>
+            </form>
+            </div>  
+</body>
+</html>
